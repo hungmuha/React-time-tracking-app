@@ -26,3 +26,6 @@ law to determine stateful component
 	This is a key criterion of stateful data: it changes.
 3. Can you compute it based on any other state or props in your component? If so, it’s not state.
 	For simplicity, we want to strive to represent state with as few data points as possible.
+
+React onClick and onChange can be used to invoke another function inside the component so that input don't conflict with the state
+
