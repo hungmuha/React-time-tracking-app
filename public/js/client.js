@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
+//all these calls are using curl,Fetch vs AJAX, what we used in project
 window.client = (function () {
   function getTimers(success) {
-    return fetch('/api/timers', {
+    return fetch('/api/timers', {//by default fetch make get request
       headers: {
         Accept: 'application/json',
-      },
+      },  //Fetch returns a promise
     }).then(checkStatus)
       .then(parseJSON)
       .then(success);

@@ -29,3 +29,21 @@ law to determine stateful component
 
 React onClick and onChange can be used to invoke another function inside the component so that input don't conflict with the state
 
+
+Method to build a React Application
+1. Break the app into components
+	We mapped out the component structure of our app by examining the app’s working UI. We then applied the single-responsibility principle to break components down so that each had minimal viable functionality.
+2. Build a static version of the app
+	Our bottom-level (user-visible) components rendered HTML based on static props, passed
+	down from parents.
+3. Determine what should be stateful
+	We used a series of questions to deduce what data should be stateful. This data was represented
+	in our static app as props.
+4. Determine in which component each piece of state should live
+	We used another series of questions to determine which component should own each piece of state. TimersDashboard owned timer state data and ToggleableTimerForm and EditableTimer both held state pertaining to whether or not to render a TimerForm.
+5. Hard-code initial states
+	We then initialized state-owners’ state properties with hard-coded values.
+6. Add inverse data flow
+	We added interactivity by decorating buttons with onClick handlers. These called functions that were passed in as props down the hierarchy from whichever component owned the relevant state being manipulated.
+
+
