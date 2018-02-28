@@ -105,6 +105,7 @@ class TimersDashboard extends React.Component{
 			<div className='ui three column centered grid'>
         		<div className='column'>
           			<EditableTimerList 
+          				// JavaScript expression in a component’s attribute, we wrap it in curly braces {}
           				timers = {this.state.timers}
           				onFormSubmit = {this.handleEditFormSubmit}
           				onTrashClick = {this.handleTrashClick}
